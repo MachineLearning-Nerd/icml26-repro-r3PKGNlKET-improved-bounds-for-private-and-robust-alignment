@@ -54,6 +54,7 @@ chosen from a desired pass tolerance, and no empirical slope is used as proof.
 - [Pinned project metadata](../../../environment/pyproject.toml)
 - [Pinned uv lockfile](../../../environment/uv.lock)
 
-The independent checker passes 68 rational cases. The negative control uses
+The independent checker passes 68 rational cases using 60-digit decimal
+arithmetic and a declared `1e-50` rounding tolerance. The negative control uses
 the wrong factor `1/q`; it fails the contraction, identity, unbiasedness, and
 Cramer-Rao checks and exits nonzero.

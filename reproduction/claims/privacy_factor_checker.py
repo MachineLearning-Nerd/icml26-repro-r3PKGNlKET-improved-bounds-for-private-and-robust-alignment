@@ -12,6 +12,7 @@ from decimal import Decimal, getcontext
 
 def main() -> int:
     getcontext().prec = 60
+    tolerance = Decimal("1e-50")
     q = Decimal(3) / Decimal(4)
     lam = Decimal(2) * q - Decimal(1)
     c = Decimal(1) / lam
@@ -33,12 +34,14 @@ def main() -> int:
         for mu_num in range(-8, 9):
             mu_grid = Decimal(mu_num) / Decimal(10)
             privatized = lam_grid * mu_grid
-            if c_grid * privatized != mu_grid:
+            if abs(c_grid * privatized - mu_grid) > tolerance:
                 grid_failures.append(f"q={q_grid},mu={mu_grid}")
 
     checks = {
-        "independent_unbiasedness": recovered_mean == mu,
-        "independent_cramer_rao_equality": variance == cramer_rao,
+        "independent_unbiasedness": abs(recovered_mean - mu) <= tolerance,
+        "independent_cramer_rao_equality": (
+            abs(variance - cramer_rao) <= tolerance
+        ),
         "exact_fixture_c": c == Decimal(2),
         "exhaustive_rational_grid": not grid_failures,
     }
@@ -48,6 +51,7 @@ def main() -> int:
         "checks": checks,
         "grid_cases": 4 * 17,
         "grid_failures": grid_failures,
+        "decimal_tolerance": str(tolerance),
         "variance": str(variance),
         "cramer_rao": str(cramer_rao),
     }

@@ -9,6 +9,7 @@
   },
   "grid_cases": 68,
   "grid_failures": [],
+  "decimal_tolerance": "1E-50",
   "variance": "0.0615234375",
   "cramer_rao": "0.0615234375"
 }
