@@ -1,0 +1,7 @@
+{
+  "claims": [5, 6],
+  "status": "FAIL",
+  "negative_control": true,
+  "expected_exit_code": 1,
+  "expected_failure": "priv_xpo_c_squared_scaling_is_consequential"
+}

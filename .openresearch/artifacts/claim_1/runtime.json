@@ -1,0 +1,16 @@
+{
+  "pre_run_estimate_cores": 1,
+  "pre_run_estimate_runtime_seconds": 30,
+  "selected_backend": "local",
+  "selected_flavor": null,
+  "reason": "deterministic exact arithmetic and short Python subprocesses",
+  "actual_run": {
+    "run_id": "2fca200c-4cc9-44cd-8be3-52471b49d831",
+    "git_sha": "14aa38cc5cb5a1de17b3ac9efdf37a3353d8e3d4",
+    "logical_cpu_count_visible": 8,
+    "cgroup_quota_cores": null,
+    "wall_seconds": 0.3033695420017466,
+    "process_cpu_seconds": 0.022962000000000003,
+    "python": "3.12.11"
+  }
+}

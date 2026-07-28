@@ -1,0 +1,15 @@
+{
+  "entrypoint": "README.md -> logbook.json -> pages/index.md -> pages/overview/page.md",
+  "missing_referenced_paths": [
+    "outputs/verdict.json",
+    "outputs/gate.json"
+  ],
+  "rows": [
+    {"claim": 1, "code_visible": false, "data_inline": false, "raw_link": false, "checker": false, "control": false, "exact_claim_tested": false, "release_ready": false},
+    {"claim": 2, "code_visible": false, "data_inline": false, "raw_link": false, "checker": false, "control": false, "exact_claim_tested": false, "release_ready": false},
+    {"claim": 3, "code_visible": false, "data_inline": false, "raw_link": false, "checker": false, "control": false, "exact_claim_tested": false, "release_ready": false},
+    {"claim": 4, "code_visible": false, "data_inline": false, "raw_link": false, "checker": false, "control": false, "exact_claim_tested": false, "release_ready": false},
+    {"claim": 5, "code_visible": false, "data_inline": false, "raw_link": false, "checker": false, "control": false, "exact_claim_tested": false, "release_ready": false},
+    {"claim": 6, "code_visible": false, "data_inline": false, "raw_link": false, "checker": false, "control": false, "exact_claim_tested": false, "release_ready": false}
+  ]
+}

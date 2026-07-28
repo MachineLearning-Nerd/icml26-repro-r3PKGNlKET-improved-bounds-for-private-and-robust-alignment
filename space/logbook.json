@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "title": "Private & Robust Alignment Bounds (r3PKGNlKET)",
+  "emoji": "🎯",
+  "space_id": "DineshAI/r3PKGNlKET",
+  "paper": "2512.23816",
+  "tags": [
+    "icml2026-repro",
+    "paper-r3PKGNlKET"
+  ],
+  "root": {
+    "slug": "current",
+    "title": "Current verification",
+    "file": "pages/current/page.md",
+    "children": [
+      {
+        "slug": "claim-1",
+        "title": "Claim 1 — standard private MLE log loss",
+        "file": "pages/claims/claim-1/page.md",
+        "children": []
+      },
+      {
+        "slug": "claim-2",
+        "title": "Claim 2 — improved square-loss corruption powers",
+        "file": "pages/claims/claim-2/page.md",
+        "children": []
+      },
+      {
+        "slug": "claim-3",
+        "title": "Claim 3 — privacy factor and optimality",
+        "file": "pages/claims/claim-3/page.md",
+        "children": []
+      },
+      {
+        "slug": "claim-4",
+        "title": "Claim 4 — corruption/privacy ordering",
+        "file": "pages/claims/claim-4/page.md",
+        "children": []
+      },
+      {
+        "slug": "claim-5",
+        "title": "Claim 5 — online algorithms and PrivXPO rate",
+        "file": "pages/claims/claim-5/page.md",
+        "children": []
+      },
+      {
+        "slug": "claim-6",
+        "title": "Claim 6 — offline algorithm rates",
+        "file": "pages/claims/claim-6/page.md",
+        "children": []
+      },
+      {
+        "slug": "release-report",
+        "title": "Release report and audit",
+        "file": "release/release_report.md",
+        "children": []
+      },
+      {
+        "slug": "overview",
+        "title": "Historical rejected baseline",
+        "file": "pages/overview/page.md",
+        "children": []
+      }
+    ]
+  }
+}

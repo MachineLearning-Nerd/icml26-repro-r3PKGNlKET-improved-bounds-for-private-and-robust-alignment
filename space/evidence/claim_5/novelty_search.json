@@ -1,0 +1,18 @@
+{
+  "tool": "orx lit",
+  "date": "2026-07-28",
+  "queries": [
+    "online alignment private preference labels sample complexity XPO",
+    "online RLHF local differential privacy preference feedback corruption",
+    "private robust alignment preference labels online algorithm"
+  ],
+  "scope_rule": "A falsification candidate must predate arXiv:2512.23816 and itself provide an online pairwise-preference alignment algorithm, local label privacy before learner access, and a theorem-level online guarantee.",
+  "qualifying_pre_target_result": {
+    "arxiv": "2510.13512",
+    "title": "Offline and Online KL-Regularized RLHF under Differential Privacy",
+    "published": "2025-10-15T13:04:19Z",
+    "algorithm_anchor": "https://ar5iv.labs.arxiv.org/html/2510.13512#alg2",
+    "theorem_anchor": "https://ar5iv.labs.arxiv.org/html/2510.13512#S5.Thmtheorem2"
+  },
+  "post_target_results_were_not_used_for_falsification": true
+}

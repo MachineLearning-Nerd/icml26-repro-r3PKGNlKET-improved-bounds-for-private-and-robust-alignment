@@ -1,0 +1,15 @@
+{
+  "all_old_paths_present": true,
+  "all_other_old_files_byte_identical": true,
+  "changed_uncontrolled_old_paths": [],
+  "controlled_updated_paths": [
+    "README.md",
+    "logbook.json"
+  ],
+  "historical_page_byte_identical": true,
+  "historical_page_sha256": "7612f7a7d8d7b9451b88dbf5504aac20e01a5b030a895b62e076e3c6c52f6def",
+  "judged_revision": "340d714e1848fb38fa63552937f6a1467560c61c",
+  "missing_old_paths": [],
+  "protected_path_count": 13,
+  "status": "PASS"
+}

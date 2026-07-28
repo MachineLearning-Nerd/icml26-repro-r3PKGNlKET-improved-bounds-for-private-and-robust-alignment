@@ -1,0 +1,23 @@
+{
+  "claim_id": 6,
+  "verdict": "VERIFIED",
+  "judge_claim": "Offline Priv-chi-PO and Square-chi-PO achieve c(epsilon)sqrt(log|Pi|/n), and c(epsilon)sqrt(log|Pi|/n)+alpha under CTL.",
+  "source_anchors": [
+    "https://ar5iv.labs.arxiv.org/html/2512.23816#S4.Thmtheorem4",
+    "https://ar5iv.labs.arxiv.org/html/2512.23816#S5.Thmtheorem2"
+  ],
+  "assumptions": [
+    "policy realizability",
+    "bounded implicit reward differences",
+    "finite policy class",
+    "single-policy L1 concentrability",
+    "proper beta and probability at least 1-delta"
+  ],
+  "acceptance": [
+    "implement both named offline objectives on a finite policy class",
+    "reconstruct each uniform-error to suboptimality substitution",
+    "retain the kappa prefactor symbolically",
+    "independent exponent checker passes",
+    "consequential algorithm control exits nonzero"
+  ]
+}

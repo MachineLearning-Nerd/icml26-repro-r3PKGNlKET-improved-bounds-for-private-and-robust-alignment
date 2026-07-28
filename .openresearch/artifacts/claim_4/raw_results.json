@@ -1,0 +1,19 @@
+{
+  "verdict": "VERIFIED",
+  "fixture": {
+    "rr_truthful_probability": "3/4",
+    "contraction": "1/2",
+    "c_epsilon": "2/1",
+    "alpha": "1/5",
+    "CTL_tight_bias": "2/5",
+    "LTC_tight_bias": "3/5",
+    "CTL_uniform_upper": "2/5",
+    "LTC_uniform_upper": "4/5",
+    "squared_upper_term_ratio_LTC_to_CTL": "4/1"
+  },
+  "general": {
+    "CTL": "alpha|b-h|<=2alpha",
+    "LTC": "alpha|c*b-h|<=alpha(c+1)<=2c alpha"
+  },
+  "seeds": []
+}

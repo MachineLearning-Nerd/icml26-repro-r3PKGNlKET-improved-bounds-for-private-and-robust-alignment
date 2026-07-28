@@ -1,0 +1,21 @@
+{
+  "verdict": "VERIFIED",
+  "rates": {
+    "PrivChiPO": "kappa*c(epsilon)*sqrt(log(|Pi|/delta)/n)",
+    "SquareChiPO_CTL": "kappa*(c(epsilon)*sqrt(log(|Pi|/delta)/n)+alpha)",
+    "SquareChiPO_LTC": "kappa*(c(epsilon)*sqrt(log(|Pi|/delta)/n)+c(epsilon)*alpha)"
+  },
+  "finite_fixture": {
+    "PrivChiPO_expected_selection": "A_high",
+    "SquareChiPO_expected_selection": "A_low",
+    "PrivChiPO_scores": {
+      "A_high": -0.6709814417941223,
+      "A_low": -2.510441961709959
+    },
+    "SquareChiPO_losses": {
+      "A_high": 16.358611582953635,
+      "A_low": 2.599434551257957
+    }
+  },
+  "seeds": []
+}

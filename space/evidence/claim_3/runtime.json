@@ -1,0 +1,18 @@
+{
+  "fixed_command": "uv run --frozen python -m reproduction.runner",
+  "python": "3.12.11",
+  "environment": "pyproject.toml and uv.lock",
+  "pre_run_estimate_cores": 1,
+  "pre_run_estimate_runtime_seconds": 30,
+  "selected_backend": "local",
+  "selected_flavor": null,
+  "seeds": [],
+  "actual_run": {
+    "run_id": "41c69f99-e0db-4a50-b32c-7fd280dc84a3",
+    "git_sha": "d11ba00bb56a6f4d6bdecc0ae5b9ad1b9f1abff0",
+    "logical_cpu_count_visible": 8,
+    "cgroup_quota_cores": null,
+    "wall_seconds": 0.104743,
+    "process_cpu_seconds": 0.0132
+  }
+}

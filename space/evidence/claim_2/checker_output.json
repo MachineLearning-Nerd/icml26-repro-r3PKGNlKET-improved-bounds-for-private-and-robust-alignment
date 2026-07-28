@@ -1,0 +1,7 @@
+{
+  "claims": [2, 4],
+  "status": "PASS",
+  "implementation": "independent exhaustive Fraction enumeration",
+  "cases_checked": 1600,
+  "failures": []
+}

@@ -1,0 +1,11 @@
+{
+  "canonical_entrypoint": "pages/current/page.md",
+  "rows": [
+    {"claim": 1, "canonical_page": "pages/claims/claim-1/page.md", "code_visible": true, "data_inline": true, "raw_link": true, "checker": true, "control": true, "exact_claim_tested": true, "reviewer_verdict": "VERIFIED"},
+    {"claim": 2, "canonical_page": "pages/claims/claim-2/page.md", "code_visible": true, "data_inline": true, "raw_link": true, "checker": true, "control": true, "exact_claim_tested": true, "reviewer_verdict": "VERIFIED"},
+    {"claim": 3, "canonical_page": "pages/claims/claim-3/page.md", "code_visible": true, "data_inline": true, "raw_link": true, "checker": true, "control": true, "exact_claim_tested": true, "reviewer_verdict": "VERIFIED"},
+    {"claim": 4, "canonical_page": "pages/claims/claim-4/page.md", "code_visible": true, "data_inline": true, "raw_link": true, "checker": true, "control": true, "exact_claim_tested": true, "reviewer_verdict": "VERIFIED"},
+    {"claim": 5, "canonical_page": "pages/claims/claim-5/page.md", "code_visible": true, "data_inline": true, "raw_link": true, "checker": true, "control": true, "exact_claim_tested": true, "reviewer_verdict": "FALSIFIED"},
+    {"claim": 6, "canonical_page": "pages/claims/claim-6/page.md", "code_visible": true, "data_inline": true, "raw_link": true, "checker": true, "control": true, "exact_claim_tested": true, "reviewer_verdict": "VERIFIED"}
+  ]
+}

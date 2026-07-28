@@ -1,0 +1,15 @@
+{
+  "claim": 3,
+  "status": "PASS",
+  "checks": {
+    "independent_unbiasedness": true,
+    "independent_cramer_rao_equality": true,
+    "exact_fixture_c": true,
+    "exhaustive_rational_grid": true
+  },
+  "grid_cases": 68,
+  "grid_failures": [],
+  "decimal_tolerance": "1E-50",
+  "variance": "0.0615234375",
+  "cramer_rao": "0.0615234375"
+}

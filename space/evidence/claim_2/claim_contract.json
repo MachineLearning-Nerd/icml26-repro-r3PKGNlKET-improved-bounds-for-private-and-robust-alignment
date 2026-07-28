@@ -1,0 +1,24 @@
+{
+  "claim_id": 2,
+  "verdict": "VERIFIED",
+  "judge_claim": "Lemma 3.3 improves square-loss corruption dependence from alpha to alpha^2 for CTL and from c(epsilon) alpha to c(epsilon)^2 alpha^2 for LTC.",
+  "source_anchor": "https://ar5iv.labs.arxiv.org/html/2512.23816#S3.Thmtheorem3",
+  "assumptions": [
+    "finite H subset of functions X -> [-1,1]",
+    "binary labels with a realizable conditional mean h*",
+    "adapted sequence",
+    "alpha-Huber replacement and epsilon-LDP randomized response"
+  ],
+  "quantifiers": [
+    "every alpha in [0,1/2)",
+    "every epsilon>0",
+    "simultaneously every n in [T] and h in H with probability at least 1-delta"
+  ],
+  "acceptance": [
+    "derive exact CTL and LTC conditional means",
+    "reconstruct a time-uniform square-loss martingale bound with squared approximation error",
+    "audit the prior primary source terms",
+    "independent exhaustive enumeration passes",
+    "ordering-confusion control exits nonzero"
+  ]
+}

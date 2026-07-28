@@ -1,0 +1,27 @@
+{
+  "claim_id": 5,
+  "verdict": "FALSIFIED",
+  "judge_claim": "PrivXPO and SquareXPO are the first online algorithms for private and robust preference alignment, and PrivXPO has suboptimality O(c(epsilon)sqrt(log(|Pi|T)/T)).",
+  "source_anchors": [
+    "https://ar5iv.labs.arxiv.org/html/2512.23816#S4.Thmtheorem8",
+    "https://ar5iv.labs.arxiv.org/html/2512.23816#S5.SS2"
+  ],
+  "subclaims": {
+    "PrivXPO_rate": "VERIFIED",
+    "first_online_private_alignment_algorithm": "FALSIFIED",
+    "first_online_private_and_robust_alignment_algorithm": "not contradicted by the audited pre-paper corpus"
+  },
+  "falsification_contract": [
+    "identify a public work dated before the target paper",
+    "require an online pairwise-preference alignment protocol",
+    "require local differential privacy on labels before learner disclosure",
+    "require a theoretical online performance guarantee"
+  ],
+  "acceptance": [
+    "implement the named PrivXPO objective on a finite policy class",
+    "independently reconstruct the c/sqrt(T) theorem substitution",
+    "verify all falsification-contract fields against primary sources",
+    "independent checker passes",
+    "omitted-c-squared control exits nonzero"
+  ]
+}

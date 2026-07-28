@@ -1,0 +1,29 @@
+{
+  "claim_id": 1,
+  "verdict": "VERIFIED",
+  "judge_claim": "Lemma 3.1 gives near-optimal uniform convergence for standard MLE-style private log loss; a de-biased loss is unnecessary.",
+  "source_anchor": "https://ar5iv.labs.arxiv.org/html/2512.23816#S3.Thmtheorem1",
+  "assumptions": [
+    "finite conditional-density class Theta",
+    "binary labels and epsilon>0 randomized response",
+    "adapted data sequence",
+    "realizability by theta*"
+  ],
+  "quantifiers": [
+    "simultaneously for every n in [T]",
+    "every theta in Theta",
+    "probability at least 1-delta"
+  ],
+  "acceptance": [
+    "reconstruct a time-uniform likelihood-ratio supermartingale",
+    "derive exact binary randomized-response TV contraction",
+    "use only the ordinary negative log likelihood of the induced private density",
+    "independent arithmetic checker passes",
+    "raw-density-on-private-label negative control exits nonzero"
+  ],
+  "non_acceptance": [
+    "a fitted finite-sample slope",
+    "an experiment for one model class",
+    "an objective containing an unreported de-biasing correction"
+  ]
+}

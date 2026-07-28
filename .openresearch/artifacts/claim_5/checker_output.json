@@ -1,0 +1,14 @@
+{
+  "claims": [5, 6],
+  "status": "PASS",
+  "implementation": "independent objective, exponent, and date checks",
+  "novelty_counterexample_scope": {
+    "is_earlier": true,
+    "online_protocol": true,
+    "pairwise_preference_labels": true,
+    "epsilon_local_label_dp": true,
+    "randomized_response_before_disclosure": true,
+    "theoretical_online_regret_bound": true
+  },
+  "failures": []
+}
