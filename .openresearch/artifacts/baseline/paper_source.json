@@ -1,0 +1,17 @@
+{
+  "arxiv_id": "2512.23816",
+  "title": "Improved Bounds for Private and Robust Alignment",
+  "url": "https://ar5iv.labs.arxiv.org/html/2512.23816",
+  "retrieved_at_utc": "2026-07-28T17:44:34Z",
+  "user_agent": "OpenResearch-Reproduction/1.0 (paper audit; contact via project repository)",
+  "sha256": "a6f601022be169cb0651f4d4e389e233cae827109c611f79adfb7dd67fddcc0b",
+  "anchors": {
+    "ctl_ltc_definition": "S2.Thmtheorem4",
+    "lemma_3_1": "S3.Thmtheorem1",
+    "lemma_3_3": "S3.Thmtheorem3",
+    "theorem_4_4": "S4.Thmtheorem4",
+    "theorem_4_8": "S4.Thmtheorem8",
+    "theorem_5_2": "S5.Thmtheorem2",
+    "theorem_5_3": "S5.Thmtheorem3"
+  }
+}

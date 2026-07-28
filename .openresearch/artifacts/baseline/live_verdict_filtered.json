@@ -1,0 +1,19 @@
+{
+  "dataset": "ICML-2026-agent-repro/verdicts",
+  "dataset_revision": "1011185ba75e55480455dd44042ae65432f65cde",
+  "dataset_sha256": "470902e334497b1f4e42c9cd8b06ce939a984567f2aa8446b9aa4fe5cfe584aa",
+  "filter": "space_id == \"DineshAI/r3PKGNlKET\"",
+  "space_id": "DineshAI/r3PKGNlKET",
+  "sha": "340d714e1848fb38fa63552937f6a1467560c61c",
+  "judged_at": "2026-07-28T15:48:17+00:00",
+  "score": "0/12",
+  "overall": "The logbook consists almost entirely of one-line summary assertions mirroring the paper's claims, with no visible code, data, plots, methodology, or experimental details. The referenced output files (verdict.json, gate.json) are not included, making independent verification impossible.",
+  "claims": [
+    {"id": 1, "verdict": "inconclusive"},
+    {"id": 2, "verdict": "inconclusive"},
+    {"id": 3, "verdict": "inconclusive"},
+    {"id": 4, "verdict": "inconclusive"},
+    {"id": 5, "verdict": "inconclusive"},
+    {"id": 6, "verdict": "inconclusive"}
+  ]
+}
