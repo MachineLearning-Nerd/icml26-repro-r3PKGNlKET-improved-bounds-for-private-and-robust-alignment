@@ -30,8 +30,8 @@ On the fixed two-policy fixture:
 
 | Algorithm | Selected policy | Why |
 | --- | --- | --- |
-| PrivChiPO | `A_high` | highest induced-private log likelihood |
-| SquareChiPO | `A_low` | lowest unranked private square loss for `z=-1` |
+| PrivChiPO | `A_high` | scores `-0.6709814418` vs `-2.5104419617` |
+| SquareChiPO | `A_low` | losses `16.3586115830` vs `2.5994345513` |
 
 ## Rate certificate
 
@@ -63,3 +63,5 @@ suite first reruns the independently reconstructed Lemmas 3.1 and 3.3.
 The independent checker shares no primary code. It recomputes the
 consequential PrivXPO objective fixture, checks rate monomial exponents, and
 checks the dated novelty-counterexample fields. Its negative control exits 1.
+The successful cumulative run used Hugging Face `cpu-upgrade`: 8 cgroup CPU
+cores and 0.418512719 seconds runner wall time.

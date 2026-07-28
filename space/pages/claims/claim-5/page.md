@@ -63,7 +63,9 @@ producing the displayed `c sqrt(log/T)` term while retaining `kappa_cov`.
 | Check | Result |
 | --- | --- |
 | exact PrivXPO fixture selection | `A_low` |
+| PrivXPO objective, `A_high` / `A_low` | `2.5898505856` / `1.4999881131` |
 | omit-`c^2` control selection | `A_high` (control exits 1) |
+| omit-`c^2` objective, `A_high` / `A_low` | `-0.5596157879` / `0.2076393648` |
 | online-private counterexample predates target | yes |
 | counterexample meets all five scope fields | yes |
 
@@ -90,3 +92,6 @@ limitation and is not needed for the novelty falsification.
 - [Limitations](../../../evidence/claim_5/limitations.md)
 - [Runtime](../../../evidence/claim_5/runtime.json)
 - [Fixed command](../../../evidence/claim_5/command.txt)
+
+The successful run used Hugging Face `cpu-upgrade`: 8 cgroup CPU cores,
+0.418512719 seconds runner wall time, and 0.041141898 process CPU seconds.

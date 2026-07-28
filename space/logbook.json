@@ -50,6 +50,12 @@
         "children": []
       },
       {
+        "slug": "release-report",
+        "title": "Release report and audit",
+        "file": "release/release_report.md",
+        "children": []
+      },
+      {
         "slug": "overview",
         "title": "Historical rejected baseline",
         "file": "pages/overview/page.md",

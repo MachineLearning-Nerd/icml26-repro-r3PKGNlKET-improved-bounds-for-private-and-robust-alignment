@@ -5,6 +5,18 @@
   "selected_backend": "hf",
   "selected_flavor": "cpu-upgrade",
   "selection_reason": "user requires Hugging Face cpu-upgrade for uncertain CPU runtime",
-  "actual_allocation_and_runtime": "printed by the fixed runner and copied into the cumulative release record",
+  "actual_run": {
+    "run_id": "09b6f905-366e-4156-8685-22160a004133",
+    "git_sha": "d440faf10c0884d98aa143afc167e0947f8acfdc",
+    "image": "ghcr.io/astral-sh/uv:python3.12-bookworm",
+    "logical_cpu_count_visible": 64,
+    "cgroup_quota_cores": 8.0,
+    "runner_wall_seconds": 0.4185127189848572,
+    "process_cpu_seconds": 0.041141898,
+    "orx_job_duration_seconds": 10,
+    "python": "3.12.12"
+  },
+  "pricing_note": "cpu-upgrade is $0.03/hour ($0.0005/minute); exact invoice was not exposed by orx",
+  "estimated_billed_cost_usd": 0.0005,
   "seeds": []
 }

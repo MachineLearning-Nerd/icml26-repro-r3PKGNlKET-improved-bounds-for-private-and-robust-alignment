@@ -21,6 +21,11 @@ The pinned environment is Python 3.12 with `pyproject.toml` and `uv.lock`.
 [Historical rejected baseline](#/overview) is preserved unchanged and is not
 the current verifier.
 
+- [Release report and score forecast](../../release/release_report.md)
+- [Evaluator-blind red-team record](../../release/red_team.md)
+- [Upload allowlist](../../release/upload_allowlist.txt)
+- [SHA-256 upload manifest](../../release/upload_manifest.sha256)
+
 ## Evaluator-visible evidence matrix
 
 | Claim | Canonical page | Code visible | Data inline | Raw link | Checker | Control | Exact claim tested | Reviewer verdict |
@@ -31,3 +36,6 @@ the current verifier.
 | 4 | [Corruption/privacy ordering](#/claim-4) | yes | yes | yes | yes | yes | yes | VERIFIED |
 | 5 | [Online algorithms and PrivXPO rate](#/claim-5) | yes | yes | yes | yes | yes | yes | FALSIFIED |
 | 6 | [Offline PrivChiPO and SquareChiPO rates](#/claim-6) | yes | yes | yes | yes | yes | yes | VERIFIED |
+
+The matrix is also available as
+[machine-readable JSON](../../release/visibility_matrix.json).

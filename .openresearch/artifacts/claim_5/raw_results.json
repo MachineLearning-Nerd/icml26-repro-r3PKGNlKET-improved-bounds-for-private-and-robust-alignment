@@ -23,7 +23,23 @@
     "expected_PrivXPO_selection": "A_low",
     "omitted_c_squared_control_selection": "A_high",
     "SquareXPO_printed_minus_selection": "A_low",
-    "SquareXPO_corrected_plus_selection": "A_high"
+    "SquareXPO_corrected_plus_selection": "A_high",
+    "PrivXPO_scaled_objectives": {
+      "A_high": 2.5898505855606118,
+      "A_low": 1.4999881130556079
+    },
+    "PrivXPO_omitted_c_squared_objectives": {
+      "A_high": -0.5596157879354224,
+      "A_low": 0.20763936477824468
+    },
+    "SquareXPO_printed_objectives": {
+      "A_high": -1.96,
+      "A_low": -6.76
+    },
+    "SquareXPO_corrected_objectives": {
+      "A_high": 1.96,
+      "A_low": 6.76
+    }
   },
   "seeds": []
 }

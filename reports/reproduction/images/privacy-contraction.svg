@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="580" viewBox="0 0 1200 580" role="img" aria-labelledby="title desc">
+  <title id="title">Randomized response contraction and privacy cost</title>
+  <desc id="desc">At exp epsilon equals 3, clean Bernoulli probabilities 3/4 and 1/4 become private probabilities 5/8 and 3/8. Total variation contracts from 1/2 to 1/4, so c equals 2 and variance cost c squared equals 4.</desc>
+  <rect width="1200" height="580" fill="#f7f5ef"/>
+  <text x="64" y="70" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#17212b">Randomized response contracts signal by exactly 1/c(ε)</text>
+  <text x="64" y="108" font-family="Arial, sans-serif" font-size="20" fill="#51606e">Exact fixture: exp(ε)=3, truthful probability q=3/4</text>
+  <g font-family="Arial, sans-serif">
+    <text x="130" y="174" font-size="22" font-weight="700" fill="#17212b">Clean distributions</text>
+    <rect x="130" y="205" width="360" height="62" rx="10" fill="#e5e8eb"/>
+    <rect x="130" y="205" width="270" height="62" rx="10" fill="#2166ac"/>
+    <text x="145" y="244" font-size="18" fill="white">P(+1)=3/4</text>
+    <rect x="130" y="289" width="360" height="62" rx="10" fill="#e5e8eb"/>
+    <rect x="130" y="289" width="90" height="62" rx="10" fill="#b2182b"/>
+    <text x="145" y="328" font-size="18" fill="white">Q=1/4</text>
+    <text x="310" y="392" text-anchor="middle" font-size="24" font-weight="700" fill="#17212b">TV = 1/2</text>
+    <path d="M535 277 L655 277" stroke="#17212b" stroke-width="5"/>
+    <path d="M655 277 L630 260 M655 277 L630 294" stroke="#17212b" stroke-width="5" fill="none"/>
+    <text x="595" y="244" text-anchor="middle" font-size="20" fill="#51606e">randomize</text>
+    <text x="595" y="324" text-anchor="middle" font-size="20" fill="#51606e">× 1/2</text>
+    <text x="710" y="174" font-size="22" font-weight="700" fill="#17212b">Private distributions</text>
+    <rect x="710" y="205" width="360" height="62" rx="10" fill="#e5e8eb"/>
+    <rect x="710" y="205" width="225" height="62" rx="10" fill="#2166ac"/>
+    <text x="725" y="244" font-size="18" fill="white">P̃(+1)=5/8</text>
+    <rect x="710" y="289" width="360" height="62" rx="10" fill="#e5e8eb"/>
+    <rect x="710" y="289" width="135" height="62" rx="10" fill="#b2182b"/>
+    <text x="725" y="328" font-size="18" fill="white">Q̃=3/8</text>
+    <text x="890" y="392" text-anchor="middle" font-size="24" font-weight="700" fill="#17212b">TV = 1/4</text>
+    <rect x="300" y="445" width="600" height="82" rx="14" fill="#17212b"/>
+    <text x="600" y="479" text-anchor="middle" font-size="21" fill="white">c(ε)=2 restores the mean; c(ε)²=4 is the variance cost</text>
+    <text x="600" y="508" text-anchor="middle" font-size="17" fill="#cfd8df">attainable estimator and estimator-independent lower bound agree</text>
+  </g>
+</svg>

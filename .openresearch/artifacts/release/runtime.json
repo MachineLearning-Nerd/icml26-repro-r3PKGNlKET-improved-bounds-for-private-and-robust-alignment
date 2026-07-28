@@ -1,0 +1,9 @@
+{
+  "fixed_command": "uv run --frozen python -m reproduction.runner",
+  "pre_run_estimate_cores": 1,
+  "pre_run_estimate_runtime_seconds": 30,
+  "selected_backend": "local",
+  "selected_flavor": null,
+  "selection_reason": "deterministic cumulative regression and text-only release checks are expected to finish within five minutes on one core",
+  "seeds": []
+}

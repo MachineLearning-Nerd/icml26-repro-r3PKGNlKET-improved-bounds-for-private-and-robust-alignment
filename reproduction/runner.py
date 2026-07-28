@@ -261,11 +261,42 @@ def verify_claims_2_and_4() -> dict[str, Any]:
 def verify_claims_5_and_6() -> dict[str, Any]:
     from reproduction.claims.alignment_algorithms import certificate
 
+    primary = certificate()
+    raw_5 = json.loads(
+        (
+            ROOT
+            / ".openresearch"
+            / "artifacts"
+            / "claim_5"
+            / "raw_results.json"
+        ).read_text(encoding="utf-8")
+    )
+    raw_6 = json.loads(
+        (
+            ROOT
+            / ".openresearch"
+            / "artifacts"
+            / "claim_6"
+            / "raw_results.json"
+        ).read_text(encoding="utf-8")
+    )
+    fixture = primary["finite_policy_fixture"]
+    if raw_5["finite_fixture"]["expected_PrivXPO_selection"] != fixture[
+        "PrivXPO_selected"
+    ]:
+        raise AssertionError("Claim 5 raw PrivXPO selection mismatch")
+    if raw_6["finite_fixture"]["PrivChiPO_scores"] != fixture["PrivChiPO_scores"]:
+        raise AssertionError("Claim 6 raw PrivChiPO scores mismatch")
+    if raw_6["finite_fixture"]["SquareChiPO_losses"] != fixture[
+        "SquareChiPO_losses"
+    ]:
+        raise AssertionError("Claim 6 raw SquareChiPO losses mismatch")
+
     result = _run_claim_with_control(
         claim_label="CLAIMS 5 AND 6",
         primary_module="reproduction.claims.alignment_algorithms",
         checker_module="reproduction.claims.alignment_algorithms_checker",
-        certificate=certificate,
+        certificate=lambda: primary,
     )
     result["status"] = {"claim_5": "FALSIFIED", "claim_6": "VERIFIED"}
     return result
@@ -295,6 +326,9 @@ def main() -> int:
                 verify_claims_5_and_6(),
             ],
         }
+        from reproduction.release import validate_release_surface
+
+        result["release_surface"] = validate_release_surface()
         result["status"] = "PASS"
         exit_code = 0
     except Exception as exc:  # pragma: no cover - exercised by negative controls later
@@ -309,7 +343,7 @@ def main() -> int:
             ROOT
             / ".openresearch"
             / "artifacts"
-            / "claim_6"
+            / "release"
             / "runtime.json"
         ).read_text(encoding="utf-8")
     )
