@@ -1,0 +1,8 @@
+{
+  "pre_run_estimate_cores": 1,
+  "pre_run_estimate_runtime_seconds": 30,
+  "selected_backend": "local",
+  "selected_flavor": null,
+  "reason": "deterministic exact arithmetic and short Python subprocesses",
+  "actual_allocation_and_runtime": "printed by the fixed runner and copied into the cumulative release record"
+}

@@ -1,0 +1,7 @@
+{
+  "claims": [2, 4],
+  "status": "FAIL",
+  "negative_control": true,
+  "expected_exit_code": 1,
+  "expected_failure": "ltc_scaled_mean_formula, ltc_endpoint_is_tight, and ltc_has_c_alpha_order"
+}

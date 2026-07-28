@@ -14,9 +14,27 @@
     "file": "pages/current/page.md",
     "children": [
       {
+        "slug": "claim-1",
+        "title": "Claim 1 — standard private MLE log loss",
+        "file": "pages/claims/claim-1/page.md",
+        "children": []
+      },
+      {
+        "slug": "claim-2",
+        "title": "Claim 2 — improved square-loss corruption powers",
+        "file": "pages/claims/claim-2/page.md",
+        "children": []
+      },
+      {
         "slug": "claim-3",
         "title": "Claim 3 — privacy factor and optimality",
         "file": "pages/claims/claim-3/page.md",
+        "children": []
+      },
+      {
+        "slug": "claim-4",
+        "title": "Claim 4 — corruption/privacy ordering",
+        "file": "pages/claims/claim-4/page.md",
         "children": []
       },
       {

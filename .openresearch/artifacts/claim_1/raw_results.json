@@ -1,0 +1,19 @@
+{
+  "verdict": "VERIFIED",
+  "fixture": {
+    "rr_truthful_probability": "3/4",
+    "contraction": "1/2",
+    "c_epsilon": "2/1",
+    "clean_truth_plus_probability": "3/4",
+    "clean_candidate_plus_probability": "1/4",
+    "private_truth_plus_probability": "5/8",
+    "private_candidate_plus_probability": "3/8",
+    "clean_tv": "1/2",
+    "private_tv": "1/4",
+    "private_hellinger_squared": 0.06350832689629149,
+    "private_affinity": 0.9682458365518543
+  },
+  "general_result": "sum clean_TV^2 <= c(epsilon)^2 [private_NLL_difference + 2 log(|Theta|/delta)]",
+  "objective": "ordinary negative log likelihood of the induced private density",
+  "seeds": []
+}

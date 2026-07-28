@@ -1,0 +1,17 @@
+{
+  "verdict": "VERIFIED",
+  "current_lemma_3_3": {
+    "CTL_squared_error_corruption_term": "n*alpha^2",
+    "LTC_squared_error_corruption_term": "n*c(epsilon)^2*alpha^2"
+  },
+  "prior_square_chi_po_lemma_5_1": {
+    "CTL_squared_error_corruption_term": "alpha",
+    "LTC_squared_error_corruption_term": "c(epsilon)*alpha"
+  },
+  "explicit_certificate_constants": {
+    "empirical_loss_difference": 2,
+    "n_alpha_app_squared": 8,
+    "C_squared_log_class_over_delta": 16
+  },
+  "seeds": []
+}

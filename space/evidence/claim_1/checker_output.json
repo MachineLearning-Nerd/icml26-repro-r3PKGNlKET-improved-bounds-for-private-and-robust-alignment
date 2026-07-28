@@ -1,0 +1,8 @@
+{
+  "claim": 1,
+  "status": "PASS",
+  "implementation": "independent Decimal arithmetic; no primary imports",
+  "cases_checked": 168,
+  "precision_digits": 70,
+  "failures": []
+}

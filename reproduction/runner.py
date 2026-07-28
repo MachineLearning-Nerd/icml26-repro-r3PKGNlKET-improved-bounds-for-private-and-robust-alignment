@@ -180,6 +180,84 @@ def verify_claim_3() -> dict[str, Any]:
     }
 
 
+def _run_claim_with_control(
+    *,
+    claim_label: str,
+    primary_module: str,
+    checker_module: str,
+    certificate: Any,
+) -> dict[str, Any]:
+    primary = certificate()
+    checker_process = subprocess.run(
+        [sys.executable, "-m", checker_module],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    print(f"=== {claim_label} INDEPENDENT CHECKER ===")
+    print(checker_process.stdout.rstrip())
+    if checker_process.returncode != 0:
+        raise AssertionError(
+            f"{claim_label} independent checker exited "
+            f"{checker_process.returncode}"
+        )
+    checker = json.loads(checker_process.stdout)
+    if checker["status"] != "PASS":
+        raise AssertionError(f"{claim_label} independent checker did not PASS")
+
+    negative_process = subprocess.run(
+        [sys.executable, "-m", primary_module, "--negative-control"],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    print(f"=== {claim_label} NEGATIVE CONTROL ===")
+    print(negative_process.stdout.rstrip())
+    if negative_process.returncode == 0:
+        raise AssertionError(f"{claim_label} negative control unexpectedly passed")
+    negative = json.loads(negative_process.stdout)
+    if negative["status"] != "FAIL":
+        raise AssertionError(f"{claim_label} negative control did not report FAIL")
+
+    print(f"=== {claim_label} PRIMARY CERTIFICATE ===")
+    print(json.dumps(primary, indent=2, sort_keys=True))
+    return {
+        "claim": primary.get("claim", primary.get("claims")),
+        "status": "VERIFIED",
+        "primary_checks": primary["checks"],
+        "independent_checker": checker,
+        "negative_control": {
+            "exit_code": negative_process.returncode,
+            "status": negative["status"],
+            "error": negative["error"],
+        },
+    }
+
+
+def verify_claim_1() -> dict[str, Any]:
+    from reproduction.claims.log_loss_reduction import certificate
+
+    return _run_claim_with_control(
+        claim_label="CLAIM 1",
+        primary_module="reproduction.claims.log_loss_reduction",
+        checker_module="reproduction.claims.log_loss_reduction_checker",
+        certificate=certificate,
+    )
+
+
+def verify_claims_2_and_4() -> dict[str, Any]:
+    from reproduction.claims.corruption_order import certificate
+
+    return _run_claim_with_control(
+        claim_label="CLAIMS 2 AND 4",
+        primary_module="reproduction.claims.corruption_order",
+        checker_module="reproduction.claims.corruption_order_checker",
+        certificate=certificate,
+    )
+
+
 def _git_sha() -> str:
     process = subprocess.run(
         ["git", "rev-parse", "HEAD"],
@@ -197,7 +275,11 @@ def main() -> int:
     try:
         result = {
             "historical_regression": audit_historical_baseline(),
-            "claims": [verify_claim_3()],
+            "claims": [
+                verify_claim_1(),
+                verify_claims_2_and_4(),
+                verify_claim_3(),
+            ],
         }
         result["status"] = "PASS"
         exit_code = 0
@@ -213,7 +295,7 @@ def main() -> int:
             ROOT
             / ".openresearch"
             / "artifacts"
-            / "claim_3"
+            / "claim_4"
             / "runtime.json"
         ).read_text(encoding="utf-8")
     )

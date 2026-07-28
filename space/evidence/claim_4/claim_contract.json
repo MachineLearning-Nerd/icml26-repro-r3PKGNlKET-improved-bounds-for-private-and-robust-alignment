@@ -1,0 +1,23 @@
+{
+  "claim_id": 4,
+  "verdict": "VERIFIED",
+  "judge_claim": "CTL has an alpha-order conditional-mean corruption term, whereas LTC has a c(epsilon) alpha-order term.",
+  "source_anchor": "https://ar5iv.labs.arxiv.org/html/2512.23816#S2.Thmtheorem4",
+  "assumptions": [
+    "binary clean and replacement labels",
+    "alpha-Huber replacement with alpha in [0,1/2)",
+    "epsilon>0 binary randomized response"
+  ],
+  "quantifiers": [
+    "every clean conditional mean h in [-1,1]",
+    "every adversarial replacement mean b in [-1,1]",
+    "every alpha in [0,1/2) and epsilon>0"
+  ],
+  "acceptance": [
+    "enumerate both generative orderings exactly",
+    "prove uniform upper bounds",
+    "give endpoint witnesses establishing matching order",
+    "independent checker passes",
+    "swapped-order control exits nonzero"
+  ]
+}
