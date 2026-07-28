@@ -1,0 +1,13 @@
+{
+  "fixed_command": "uv run --frozen python -m reproduction.runner",
+  "python": "3.12.11",
+  "environment": "pyproject.toml and uv.lock",
+  "pre_run_estimate_cores": 1,
+  "pre_run_estimate_runtime_seconds": 30,
+  "selected_backend": "local",
+  "selected_flavor": null,
+  "seeds": [],
+  "git_sha": "printed by the fixed runner at execution time",
+  "actual_cpu_allocation": "printed by the fixed runner at execution time",
+  "actual_runtime": "printed by the fixed runner at execution time"
+}

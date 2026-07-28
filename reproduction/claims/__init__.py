@@ -1,0 +1,1 @@
+"""Individual claim certificates."""

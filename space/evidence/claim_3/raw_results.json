@@ -1,0 +1,21 @@
+{
+  "claim": 3,
+  "status": "VERIFIED",
+  "fixture": {
+    "q_rr_truthful": "3/4",
+    "exp_epsilon": "3/1",
+    "contraction_lambda": "1/2",
+    "c_epsilon": "2/1",
+    "mu": "1/4",
+    "n": 64,
+    "output_plus_probability": "9/16",
+    "estimator_variance": "63/1024",
+    "fisher_information_per_sample": "16/63",
+    "cramer_rao_variance": "63/1024",
+    "two_point_delta": "1/16",
+    "two_point_output_p_plus": "33/64",
+    "two_point_output_p_minus": "31/64"
+  },
+  "general_result": "minimax MSE is Omega(c(epsilon)^2/n) when n >= c(epsilon)^2/64",
+  "seeds": []
+}

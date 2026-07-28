@@ -1,0 +1,12 @@
+{
+  "control": "replace c=1/(2q-1) by the incorrect c=1/q",
+  "expected_exit_code": 1,
+  "observed_status": "FAIL",
+  "expected_failed_checks": [
+    "contraction_is_inverse_c",
+    "c_matches_exponential_identity",
+    "c_matches_hyperbolic_identity",
+    "unbiased_estimator",
+    "cramer_rao_attained"
+  ]
+}

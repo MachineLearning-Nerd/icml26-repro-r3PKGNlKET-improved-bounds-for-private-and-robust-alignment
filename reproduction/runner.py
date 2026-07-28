@@ -11,6 +11,7 @@ import hashlib
 import json
 import os
 import platform
+import subprocess
 import sys
 import time
 from pathlib import Path
@@ -102,25 +103,130 @@ def audit_historical_baseline() -> dict[str, Any]:
     }
 
 
+def verify_claim_3() -> dict[str, Any]:
+    from reproduction.claims.privacy_factor import certificate
+
+    primary = certificate()
+    raw = json.loads(
+        (
+            ROOT
+            / ".openresearch"
+            / "artifacts"
+            / "claim_3"
+            / "raw_results.json"
+        ).read_text(encoding="utf-8")
+    )
+    fixture = primary["fixture"]
+    for key, expected in raw["fixture"].items():
+        if fixture[key] != expected:
+            raise AssertionError(
+                f"Claim 3 raw fixture mismatch for {key}: "
+                f"{fixture[key]!r} != {expected!r}"
+            )
+
+    checker_process = subprocess.run(
+        [
+            sys.executable,
+            "-m",
+            "reproduction.claims.privacy_factor_checker",
+        ],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    print("=== CLAIM 3 INDEPENDENT CHECKER ===")
+    print(checker_process.stdout.rstrip())
+    if checker_process.returncode != 0:
+        raise AssertionError(
+            f"Claim 3 independent checker exited {checker_process.returncode}"
+        )
+    checker = json.loads(checker_process.stdout)
+    if checker["status"] != "PASS":
+        raise AssertionError("Claim 3 independent checker did not PASS")
+
+    negative_process = subprocess.run(
+        [
+            sys.executable,
+            "-m",
+            "reproduction.claims.privacy_factor",
+            "--negative-control",
+        ],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    print("=== CLAIM 3 NEGATIVE CONTROL ===")
+    print(negative_process.stdout.rstrip())
+    if negative_process.returncode == 0:
+        raise AssertionError("Claim 3 negative control unexpectedly passed")
+    negative = json.loads(negative_process.stdout)
+    if negative["status"] != "FAIL":
+        raise AssertionError("Claim 3 negative control did not report FAIL")
+
+    print("=== CLAIM 3 PRIMARY CERTIFICATE ===")
+    print(json.dumps(primary, indent=2, sort_keys=True))
+    return {
+        "claim": 3,
+        "status": "VERIFIED",
+        "primary_checks": primary["checks"],
+        "independent_checker": checker,
+        "negative_control": {
+            "exit_code": negative_process.returncode,
+            "status": negative["status"],
+            "error": negative["error"],
+        },
+    }
+
+
+def _git_sha() -> str:
+    process = subprocess.run(
+        ["git", "rev-parse", "HEAD"],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=True,
+    )
+    return process.stdout.strip()
+
+
 def main() -> int:
     started_wall = time.perf_counter()
     started_cpu = time.process_time()
     try:
-        result = audit_historical_baseline()
+        result = {
+            "historical_regression": audit_historical_baseline(),
+            "claims": [verify_claim_3()],
+        }
+        result["status"] = "PASS"
         exit_code = 0
     except Exception as exc:  # pragma: no cover - exercised by negative controls later
         result = {
-            "check": "historical_judged_baseline",
             "status": "FAIL",
             "error": f"{type(exc).__name__}: {exc}",
         }
         exit_code = 1
 
+    runtime_profile = json.loads(
+        (
+            ROOT
+            / ".openresearch"
+            / "artifacts"
+            / "claim_3"
+            / "runtime.json"
+        ).read_text(encoding="utf-8")
+    )
+    result["provenance"] = {
+        "git_sha": _git_sha(),
+        "fixed_command": "uv run --frozen python -m reproduction.runner",
+        "seeds": [],
+    }
     result["compute"] = {
         "pre_run_estimate_cores": 1,
         "pre_run_estimate_runtime_seconds": 30,
-        "selected_backend": "local",
-        "selected_flavor": None,
+        "selected_backend": runtime_profile["selected_backend"],
+        "selected_flavor": runtime_profile["selected_flavor"],
         "actual_allocation": _cpu_allocation(),
         "wall_seconds": time.perf_counter() - started_wall,
         "cpu_seconds": time.process_time() - started_cpu,

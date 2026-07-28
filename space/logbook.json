@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "title": "Private & Robust Alignment Bounds (r3PKGNlKET)",
+  "emoji": "🎯",
+  "space_id": "DineshAI/r3PKGNlKET",
+  "paper": "2512.23816",
+  "tags": [
+    "icml2026-repro",
+    "paper-r3PKGNlKET"
+  ],
+  "root": {
+    "slug": "current",
+    "title": "Current verification",
+    "file": "pages/current/page.md",
+    "children": [
+      {
+        "slug": "claim-3",
+        "title": "Claim 3 — privacy factor and optimality",
+        "file": "pages/claims/claim-3/page.md",
+        "children": []
+      },
+      {
+        "slug": "overview",
+        "title": "Historical rejected baseline",
+        "file": "pages/overview/page.md",
+        "children": []
+      }
+    ]
+  }
+}

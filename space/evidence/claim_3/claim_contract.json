@@ -1,0 +1,31 @@
+{
+  "claim_id": 3,
+  "judge_claim": "The privacy cost enters through c(epsilon)=(exp(epsilon)+1)/(exp(epsilon)-1), which the paper shows is optimal.",
+  "source_anchor": "https://ar5iv.labs.arxiv.org/html/2512.23816#S3.Thmtheorem1",
+  "paper_scope": {
+    "mechanism": "binary epsilon-LDP randomized response",
+    "epsilon_domain": "epsilon > 0",
+    "model": "realizable finite conditional-density class",
+    "loss": "private MLE log loss",
+    "estimation_metric": "squared total variation",
+    "rate_statement": "c(epsilon)^2 is the optimal estimation-error privacy cost"
+  },
+  "quantifiers": [
+    "all epsilon > 0 for the algebraic contraction identity",
+    "all Bernoulli means in [-1,1] for the estimator calculation",
+    "all estimators for the two-point minimax lower-bound conclusion"
+  ],
+  "acceptance": [
+    "derive the RR contraction exactly",
+    "show the stated exponential and hyperbolic forms agree",
+    "exhibit an estimator attaining variance (c^2-mu^2)/n",
+    "derive an estimator-independent Omega(c^2/n) lower bound",
+    "independent checker passes",
+    "deliberately wrong scaling exits nonzero"
+  ],
+  "non_acceptance": [
+    "checking only c(epsilon)=1/tanh(epsilon/2)",
+    "a finite Monte Carlo slope without an information lower bound",
+    "claiming an exact universal constant hidden by the paper's big-O notation"
+  ]
+}
