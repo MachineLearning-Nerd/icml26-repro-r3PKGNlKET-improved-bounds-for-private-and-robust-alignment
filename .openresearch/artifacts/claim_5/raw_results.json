@@ -1,0 +1,29 @@
+{
+  "verdict": "FALSIFIED",
+  "subclaims": {
+    "PrivXPO_rate": "VERIFIED",
+    "first_online_private_alignment_algorithm": "FALSIFIED",
+    "first_online_private_and_robust_alignment_algorithm": "not contradicted in audited pre-target corpus"
+  },
+  "novelty_counterexample": {
+    "arxiv": "2510.13512",
+    "published": "2025-10-15T13:04:19Z",
+    "algorithm": "POKL-RLHF Algorithm 2",
+    "privacy": "epsilon-pure local label DP via randomized response before disclosure",
+    "setting": "online KL-regularized RLHF from pairwise preferences",
+    "guarantee": "Theorem 5.2 online logarithmic regret bound"
+  },
+  "target_arxiv_published": "2025-12-29T19:20:35Z",
+  "target_arxiv_metadata_sha256": "fefe71a75289e1b5d5c98c983333f67431441e5bc09a750432c9cfe3792e593b",
+  "rate_derivation": {
+    "squared_prediction_error": "c(epsilon)^2*log(|Pi|T/delta)/T",
+    "suboptimality_term": "c(epsilon)*sqrt(log(|Pi|T/delta)/T)"
+  },
+  "finite_fixture": {
+    "expected_PrivXPO_selection": "A_low",
+    "omitted_c_squared_control_selection": "A_high",
+    "SquareXPO_printed_minus_selection": "A_low",
+    "SquareXPO_corrected_plus_selection": "A_high"
+  },
+  "seeds": []
+}

@@ -1,0 +1,10 @@
+{
+  "fixed_command": "uv run --frozen python -m reproduction.runner",
+  "pre_run_estimate_required_cores": 1,
+  "pre_run_runtime_class": "uncertain",
+  "selected_backend": "hf",
+  "selected_flavor": "cpu-upgrade",
+  "selection_reason": "user requires Hugging Face cpu-upgrade for uncertain CPU runtime",
+  "actual_allocation_and_runtime": "printed by the fixed runner and copied into the cumulative release record",
+  "seeds": []
+}

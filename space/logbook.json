@@ -38,6 +38,18 @@
         "children": []
       },
       {
+        "slug": "claim-5",
+        "title": "Claim 5 — online algorithms and PrivXPO rate",
+        "file": "pages/claims/claim-5/page.md",
+        "children": []
+      },
+      {
+        "slug": "claim-6",
+        "title": "Claim 6 — offline algorithm rates",
+        "file": "pages/claims/claim-6/page.md",
+        "children": []
+      },
+      {
         "slug": "overview",
         "title": "Historical rejected baseline",
         "file": "pages/overview/page.md",

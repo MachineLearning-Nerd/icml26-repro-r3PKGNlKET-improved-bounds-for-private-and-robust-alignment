@@ -258,6 +258,19 @@ def verify_claims_2_and_4() -> dict[str, Any]:
     )
 
 
+def verify_claims_5_and_6() -> dict[str, Any]:
+    from reproduction.claims.alignment_algorithms import certificate
+
+    result = _run_claim_with_control(
+        claim_label="CLAIMS 5 AND 6",
+        primary_module="reproduction.claims.alignment_algorithms",
+        checker_module="reproduction.claims.alignment_algorithms_checker",
+        certificate=certificate,
+    )
+    result["status"] = {"claim_5": "FALSIFIED", "claim_6": "VERIFIED"}
+    return result
+
+
 def _git_sha() -> str:
     process = subprocess.run(
         ["git", "rev-parse", "HEAD"],
@@ -279,6 +292,7 @@ def main() -> int:
                 verify_claim_1(),
                 verify_claims_2_and_4(),
                 verify_claim_3(),
+                verify_claims_5_and_6(),
             ],
         }
         result["status"] = "PASS"
@@ -295,7 +309,7 @@ def main() -> int:
             ROOT
             / ".openresearch"
             / "artifacts"
-            / "claim_4"
+            / "claim_6"
             / "runtime.json"
         ).read_text(encoding="utf-8")
     )

@@ -13,7 +13,8 @@ uv run --frozen python -m reproduction.runner
 | 2 | [Improved square-loss corruption powers](../claims/claim-2/page.md) | VERIFIED |
 | 3 | [Privacy factor and optimality](../claims/claim-3/page.md) | VERIFIED |
 | 4 | [Corruption/privacy ordering](../claims/claim-4/page.md) | VERIFIED |
-| 5, 6 | Pending descendant experiments | BLOCKED |
+| 5 | [Online algorithms and PrivXPO rate](../claims/claim-5/page.md) | FALSIFIED |
+| 6 | [Offline PrivChiPO and SquareChiPO rates](../claims/claim-6/page.md) | VERIFIED |
 
 The pinned environment is Python 3.12 with `pyproject.toml` and `uv.lock`.
 
@@ -28,5 +29,5 @@ the current verifier.
 | 2 | [Improved square-loss corruption powers](#/claim-2) | yes | yes | yes | yes | yes | yes | VERIFIED |
 | 3 | [Privacy factor and optimality](#/claim-3) | yes | yes | yes | yes | yes | yes | VERIFIED |
 | 4 | [Corruption/privacy ordering](#/claim-4) | yes | yes | yes | yes | yes | yes | VERIFIED |
-| 5 | pending | no | no | no | no | no | no | BLOCKED |
-| 6 | pending | no | no | no | no | no | no | BLOCKED |
+| 5 | [Online algorithms and PrivXPO rate](#/claim-5) | yes | yes | yes | yes | yes | yes | FALSIFIED |
+| 6 | [Offline PrivChiPO and SquareChiPO rates](#/claim-6) | yes | yes | yes | yes | yes | yes | VERIFIED |

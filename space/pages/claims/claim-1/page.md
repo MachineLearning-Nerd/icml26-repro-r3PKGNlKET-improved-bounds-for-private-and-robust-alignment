@@ -45,7 +45,7 @@ response, `TV(P_tilde,Q_tilde)=lambda TV(P,Q)` exactly, where
 | clean truth / candidate `P(+1)` | 3/4; 1/4 |
 | private truth / candidate `P(+1)` | 5/8; 3/8 |
 | clean TV / private TV | 1/2; 1/4 |
-| private squared Hellinger | 0.06350832689629149 |
+| private squared Hellinger | 0.06350832689629163 |
 | independent cases | 168 |
 
 ## Reproducible evidence
